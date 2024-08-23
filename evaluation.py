@@ -5,7 +5,8 @@ from sklearn.metrics import mean_squared_error, mean_absolute_percentage_error
 import math
 import torch
 
-class Evaluator:
+class Evaluator(DataProcessor):
+    super().__init__()
     def __init__(self, model, data_processor, test_norm, window_size):
         self.model = model
         self.data_processor = data_processor
